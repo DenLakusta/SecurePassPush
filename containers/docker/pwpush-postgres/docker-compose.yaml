@@ -5,16 +5,16 @@ services:
     image: docker.io/postgres:10
     volumes:
       - /var/lib/postgresql/data:/var/lib/postgresql/data
-    ports:
-      - "5432:5432"
+    expose:
+      - "5432"
     environment:
       POSTGRES_USER: passwordpusher_user
       POSTGRES_PASSWORD: passwordpusher_passwd
       POSTGRES_DB: passwordpusher_db
 
   passwordpusher:
-    image: myimage:latest
+    image: skf-secrets:latest
     ports:
-      - "5100:5100"
+      - "127.0.0.1:5100:5100"
     depends_on:
       - postgres

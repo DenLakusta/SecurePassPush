@@ -19,7 +19,6 @@ RUN apt-get update -qq && \
     git clone https://github.com/DenLakusta/SecurePassPush.git && \
     touch ${APP_ROOT}/log/production.log
     
-EXPOSE 5100
 
 RUN gem install bundler
 

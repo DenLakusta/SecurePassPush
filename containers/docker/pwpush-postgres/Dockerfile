@@ -3,7 +3,7 @@ FROM ruby:3.0-slim-bullseye
 
 LABEL maintainer='pglombardo@hey.com'
 
-ENV APP_ROOT=/opt/PasswordPusher
+ENV APP_ROOT=/opt/SecurePassPush
 ENV PATH=${APP_ROOT}:${PATH} HOME=${APP_ROOT}
 ENV DATABASE_URL=postgres://passwordpusher_user:passwordpusher_passwd@postgres:5432/passwordpusher_db
 
